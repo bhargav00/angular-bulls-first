@@ -1,0 +1,31 @@
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Market Value</th>
+        <th>Cash</th>
+        <th>Legend</th>
+    </tr>
+    <tr ng-repeat="row in $ctrl.accounts" ng-init="market_total = 0;cash_total=0">
+        <td>{{ row.name }}</td>
+        <td ng-init="$parent.market_total = $parent.market_total + row.marketValue ">{{ row.marketValue | currency }}</td>
+        <td ng-init="$parent.cash_total = $parent.cash_total + row.cash ">{{ row.cash | currency }}</td>
+        <td>
+            <div class="legend" style="background-color: {{ row.legend }}"></div>
+        </td>
+    </tr>
+
+    <tr class="totals">
+        <td>
+            <strong>Total</strong>
+        </td>
+        <td>
+            <strong>{{ market_total | currency }}</strong>
+        </td>
+        <td>
+            <strong>{{ cash_total | currency }}</strong>
+        </td>
+        <td></td>
+    </tr>
+
+
+</table>
