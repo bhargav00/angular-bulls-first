@@ -29,12 +29,20 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: '[path][name].[ext]'
-        }  
+        }
       },
       {
         test: /\.css?$/,
         loaders: ['style', 'raw'],
         include: __dirname
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: "url-loader?limit=8192"
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass']
       }
     ]
   }
