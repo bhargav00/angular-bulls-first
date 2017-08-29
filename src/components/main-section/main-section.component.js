@@ -1,4 +1,5 @@
 import angular from 'angular'
+import './main-section.scss'
 class MainSectionController {
   handleAddAccount = () => {
     this.actions.addAccount()

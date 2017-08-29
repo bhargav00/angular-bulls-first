@@ -1,4 +1,4 @@
-import '../assests/css/app.css'
+import '../assests/scss/app.scss'
 import angular from 'angular'
 import store from './store'
 import containers from './containers'
