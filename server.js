@@ -14,7 +14,10 @@ app.use(webpackHotMiddleware(compiler))
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'index.html'))
 })
-
+app.get('/img/:name', function (req, res) {
+  var location='/assests/img/'+req.params.name;
+  res.sendFile(path.join(__dirname,location))
+})
 app.listen(port, function (error) {
   if (error) {
     console.error(error)
