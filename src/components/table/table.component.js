@@ -1,7 +1,7 @@
 import angular from 'angular'
 import './table.scss'
 export default angular
-  .module('todoApp.components.table', [])
+  .module('bullsfirst.components.table', [])
   .component('table', {
     bindings: {
       accounts: '<'

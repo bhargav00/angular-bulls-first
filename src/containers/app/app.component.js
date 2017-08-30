@@ -1,5 +1,5 @@
 import { bindActionCreators } from 'redux'
-import * as TodoActions from '../../actions'
+import * as Actions from '../../actions'
 
 class AppController {
   constructor ($ngRedux, $scope) {
@@ -12,7 +12,7 @@ class AppController {
   })
 
   mapDispatchToThis = (dispatch) => ({
-    actions: bindActionCreators(TodoActions, dispatch)
+    actions: bindActionCreators(Actions, dispatch)
   })
 }
 

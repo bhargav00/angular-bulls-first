@@ -5,13 +5,13 @@ export default function accounts (state = InitialData, action) {
   switch (action.type) {
     case ADD_ACCOUNT:
       return [
+        ...state,
         {
           name: 'New Account',
-          marketValue: Math.random() * 100000,
-          cash: Math.random() * 400000,
-          legend: '#' + (Math.random().toString(16) + "000000").substring(2,8)
-        },
-        ...state
+          marketValue: 100,
+          cash: 100,
+          legend: 'cyan'
+        }
       ]
     default:
       return state

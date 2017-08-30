@@ -6,7 +6,7 @@ class MainSectionController {
   }
 }
 export default angular
-  .module('todoApp.components.mainSection', [])
+  .module('bullsfirst.components.mainSection', [])
   .component('mainSection', {
     bindings: {
       accounts: '<',
