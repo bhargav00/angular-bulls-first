@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "start": "node server.js",
-    "test": "mocha -r ./test/setup.js --compilers js:babel-register ./test/**/*.spec.js  "
+    "mocha": "mocha --compilers js:babel-register ./test/**/*.spec.js",
+    "test": "npm run mocha && karma start --single-run"
   },
   "license": "MIT",
   "dependencies": {
